@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="laundry.DashboardController">
+
+    <children>
+        <!-- বাম পাশের মেনু -->
+        <VBox alignment="TOP_CENTER" prefWidth="200" spacing="20" style="-fx-background-color: #2c3e50;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0">
+
+            <Label alignment="CENTER" prefHeight="88.0" prefWidth="200" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Laundry Admin" />
+
+            <Button fx:id="btnOrders" onAction="#handleButtonAction" prefWidth="180" style="-fx-font-size: 14px;" text="Manage Orders" />
+            <Button fx:id="btnItems" onAction="#handleButtonAction" prefWidth="180" style="-fx-font-size: 14px;" text="Manage Items" />
+            <Button fx:id="btnCustomers" onAction="#handleButtonAction" prefWidth="180" style="-fx-font-size: 14px;" text="Manage Customers" />
+
+            <Button fx:id="btnLogout" onAction="#handleButtonAction" prefWidth="180" style="-fx-font-size: 14px; -fx-background-color: #e74c3c; -fx-text-fill: white;" text="Logout" />
+        </VBox>
+
+        <!-- ডান পাশের মূল পেইজ লোড এরিয়া -->
+        <AnchorPane fx:id="mainPane" prefHeight="500.0" prefWidth="671.0" style="-fx-background-color: #ecf0f1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
+            <!-- শুরুতে এখানে স্বাগতম বা ড্যাশবোর্ড হোম পেইজ দেখাতে পারেন -->
+            <Label layoutX="135.0" layoutY="176.0" prefHeight="32.0" prefWidth="401.0" style="-fx-font-size: 22px; -fx-text-fill: #34495e;" text="Welcome to Laundry Shop Admin Portal" />
+        </AnchorPane>
+    </children>
+</AnchorPane>
