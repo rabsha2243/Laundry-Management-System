@@ -13,7 +13,7 @@ import javafx.scene.Scene;
 public class DashboardController {
 
     @FXML
-    private AnchorPane mainPane;  // ড্যাশবোর্ডের প্রধান পেন যেখানে অন্য পেইজগুলো লোড হবে
+    private AnchorPane mainPane;  
 
     @FXML
     private Button btnOrders, btnItems, btnCustomers, btnLogout;
@@ -22,7 +22,6 @@ public class DashboardController {
     private void handleButtonAction(ActionEvent event) {
         try {
             if (event.getSource() == btnLogout) {
-                // লগআউট হলে পুরো উইন্ডো পরিবর্তন করুন
                 Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 stage.setScene(new Scene(root));
@@ -39,12 +38,9 @@ public class DashboardController {
                 }
 
                 if (!fxmlFile.isEmpty()) {
-                    // mainPane এর children হিসেবে লোড করুন
                     Parent pane = FXMLLoader.load(getClass().getResource(fxmlFile));
                     mainPane.getChildren().clear();
                     mainPane.getChildren().add(pane);
-
-                    // নতুন পেইজকে mainPane এর সাইজে ফিট করুন
                     AnchorPane.setTopAnchor(pane, 0.0);
                     AnchorPane.setBottomAnchor(pane, 0.0);
                     AnchorPane.setLeftAnchor(pane, 0.0);
@@ -56,3 +52,4 @@ public class DashboardController {
         }
     }
 }
+
