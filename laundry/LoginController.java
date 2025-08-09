@@ -44,7 +44,7 @@ public class LoginController implements Initializable {
 
             ResultSet rs = pst.executeQuery();
             if (rs.next()) {
-                // Login success
+                
                 Parent root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 stage.setScene(new Scene(root));
@@ -70,6 +70,7 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // Optional init
+        
     }
 }
+
